@@ -109,6 +109,7 @@ chmod +x install_docker.sh
 ./install_docker.sh
 
 ```
+![Bash Scrpit]https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Bash%20Scrpit.png?raw=true)
 ### Run Project Locally 
 - Clone the Project as 
 ```bash
@@ -130,7 +131,7 @@ php -S localhost:9090 -t
 ```
 -Project can be accessed on localhost:9090
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Running Php Project Locally](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Running%20Locally.png?raw=true)
 
 ## Dockerize the Project 
 
