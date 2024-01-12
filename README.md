@@ -109,7 +109,7 @@ chmod +x install_docker.sh
 ./install_docker.sh
 
 ```
-![Bash Scrpit]https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Bash%20Scrpit.png?raw=true)
+![Bash Scrpit](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Bash%20Scrpit.png?raw=true)
 ### Run Project Locally 
 - Clone the Project as 
 ```bash
@@ -194,7 +194,7 @@ docker push vrdn/phphelloworld:latest
 - Link for docker hub repository:
 https://hub.docker.com/repository/docker/vrdn/phphelloworld/general
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Docker Hub Repo](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/dockerhubrepo.png?raw=true)
 
 ## Creating Docker Compose File
 - Make docker compose file as "docker-compose.yml" on root of the directory.
@@ -227,10 +227,11 @@ docker compose up --build
 -This will automatically build image and run the container.
 -Application will run on http://localhost:8080/
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Docker Compose Build](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/dock-compose%20run.png?raw=true)
+![Running Inside Container](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Running%20on%209090.png?raw=true)
 
 1. Since,I pulled php:apache image the configuration file for is automatically configured.
-2. If we have pulled only php image then we should also give configurtion file on the docker image.(If we do it from nginx then we should give configuration file for the following project.)
+2. If we have pulled only php image then we should also give apache configurtion file on the docker image.(If we do it from nginx then we should give configuration file for the following project.)
 
 ## Install Jenkins
 - To install we should install java first on our system(Endeavour os)
@@ -253,6 +254,9 @@ sudo systemctl status jenkins(To check whether jenkis is running or not )
 
 ```
 - Jenkins is available on http://localhost:8090/.(Since 8090 port is occupied by other services my jenkins is running on 8090 port ).
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+- On General click on Github Project(copy the url of the repository)
 
 -Configure Jenkins
 ```bash
