@@ -297,6 +297,55 @@ docker compose up --build
 ![Git Polling ](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Git%20Polling%20log.png?raw=true)
 
 
+## CI/CD with github actions :
+
+
+- Go to the application repository
+- Go to Settings of the repository
+- Go to Actions and runner and click New selfhsosted runners"(if you have cloud services such as AWS or AZure you can use that service)
+- Create a folder on a server or system.
+```bash
+mkdir actions-runner && cd actions-runner
+
+```
+- Download the latest runner package:
+```bash
+curl -o actions-runner-linux-x64-2.311.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.311.0/actions-runner-linux-x64-2.311.0.tar.gz
+
+```
+- Extract the installer 
+```bash
+tar xzf ./actions-runner-linux-x64-2.311.0.tar.gz
+```
+- Run Actions by :
+```bash
+./run.sh
+```
+
+- Create a directory structure as .gtihub/workflows,inside the directory create a file as CI/CD.yml.
+- The CI/CD pipeline for github actions is as:
+```bash
+name: CI/CD with Git hub Actions
+on:
+    push:
+        branches: main
+
+jobs:
+    build:
+        runs-on: self-hosted
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Container Running
+              run: docker compose up -d --build
+
+```
+- This is just a simple pipeline where in every push in github main branch  docker file is build with docker compose command.
+
+
+
+
+
 ## Conclusion
 
 README provides a comprehensive guide for setting up a DevOps environment for a PHP project, covering the installation of Docker, Docker Compose, and Jenkins. The use of Bash scripting for Docker installation, Dockerization of the PHP project, and the integration of Jenkins for continuous integration and continuous deployment (CI/CD) adds a robust and automated workflow to the development process.

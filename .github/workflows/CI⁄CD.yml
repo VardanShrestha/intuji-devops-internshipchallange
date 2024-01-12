@@ -1,0 +1,13 @@
+ name: CI/CD with Git hub Actions
+on:
+    push:
+        branches: main
+
+jobs:
+    build:
+        runs-on: self-hosted
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Container Running
+              run: docker compose up -d --build
