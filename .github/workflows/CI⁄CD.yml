@@ -1,4 +1,4 @@
- name: CI/CD with Git hub Actions
+name: Ci/Cd pipeline
 on:
     push:
         branches: main
