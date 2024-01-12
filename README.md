@@ -344,7 +344,7 @@ jobs:
 
 - You can see your build trigger on Actions of your repository:
 
-![GitHub Actions](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Git%20Polling%20log.png?raw=true)
+![GitHub Actions](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Github%20Actions.png?raw=true)
 
 - GitHub runner will stop when the session is closed 
 - To run eventhough the session is closed we should  have to install github actions as a service.
@@ -355,7 +355,6 @@ jobs:
 sudo ./svc.sh start
 ./run.sh
 ```
-
 
 ## Conclusion
 
