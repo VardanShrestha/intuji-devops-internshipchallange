@@ -110,6 +110,7 @@ chmod +x install_docker.sh
 
 ```
 ![Bash Scrpit](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Bash%20Scrpit.png?raw=true)
+![Docker Install with Bash](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/docker%20install%20with%20bash%20script.png?raw=true)
 ### Run Project Locally 
 - Clone the Project as 
 ```bash
@@ -132,6 +133,8 @@ php -S localhost:9090 -t
 -Project can be accessed on localhost:9090
 
 ![Running Php Project Locally](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Running%20Locally.png?raw=true)
+![Running Php Project Locally](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Running%20on%209090.png?raw=true)
+
 
 ## Dockerize the Project 
 
@@ -194,6 +197,7 @@ docker push vrdn/phphelloworld:latest
 - Link for docker hub repository:
 https://hub.docker.com/repository/docker/vrdn/phphelloworld/general
 
+
 ![Docker Hub Repo](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/dockerhubrepo.png?raw=true)
 
 ## Creating Docker Compose File
@@ -253,10 +257,10 @@ sudo systemctl enable jenkins
 sudo systemctl status jenkins(To check whether jenkis is running or not )
 
 ```
-- Jenkins is available on http://localhost:8090/.(Since 8090 port is occupied by other services my jenkins is running on 8090 port ).
+- Jenkins is available on http://localhost:8090/.(Since 8080 port is occupied by other services my jenkins is running on 8090 port ).
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
-- On General click on Github Project(copy the url of the repository)
+![Accessing Jenkins on 8090](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Jenkins%20Freestyle%20job%20.png?raw=true)
+
 
 -Configure Jenkins
 ```bash
@@ -266,23 +270,31 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 - Copy the password and Login into Jenkins.
 ## Buildind CI/CD with Jenkins
 - Click into New item and select Freestyle Project
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+![FreeStyle Project](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Jenkins%20Feeestyle%20project.png?raw=true)
+
 - On General click on Github Project(copy the url of the repository)
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+![Jenkins General Setup](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Jenkins%20General%20Setup.png?raw=true)
+
 - Click on Git on Source Code Management and copy url of the repository.
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+![Source COde Management Jenkins](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Jenkins%20Source%20Code%20Management.png?raw=true)
+
 - On Build Triggers click on Poll Scm and set a cron job for it.( I set it as "* * * * *" which states Jenkins will send request on Git every minute to check whether there is any commit).
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+![Build Triggers](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Jenkins%20Build%20Triggers.png?raw=true)
+
 - On Build Steps click on Add build steps and click on Execute Shell and write the command to build the docker file.
 ```bash
 docker compose up --build
 ```
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Build Steps](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Build%20Steps.png?raw=true)
 
 - Click on Save and Apply
 - Check on dashboard of the job is failed or passed.
 - Check Build status on Git Polling log 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Git Polling ](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Git%20Polling%20log.png?raw=true)
 
 
 
