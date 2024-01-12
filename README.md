@@ -342,8 +342,19 @@ jobs:
 ```
 - This is just a simple pipeline where in every push in github main branch  docker file is build with docker compose command.
 
+- You can see your build trigger on Actions of your repository:
 
+![GitHub Actions](https://github.com/VardanShrestha/intuji-devops-internshipchallange/blob/main/screenshots/Git%20Polling%20log.png?raw=true)
 
+- GitHub runner will stop when the session is closed 
+- To run eventhough the session is closed we should  have to install github actions as a service.
+- To Install Github runner as a service :
+```bash
+ sudo ./svc.sh install
+./svc.sh install USERNAME
+sudo ./svc.sh start
+./run.sh
+```
 
 
 ## Conclusion
